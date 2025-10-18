@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant tip</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: rgb(19, 26, 48);
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 36px auto;
+      padding: 0 16px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+    }
+
+    .card {
+      background-color: rgb(11, 18, 40);
+      border: 1px solid rgb(30, 36, 60);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .output {
+      background-color: rgb(19, 26, 48);
+      border: 1px solid rgb(30, 36, 60);
+      padding: 12px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      line-height: 24px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Restaurant Calculator</h1>
+    <div class="card">
+      <h2>Tip and Split</h2>
+      <div id="output" class="output">
+        Loading... 
+      </div>
+    </div>
+  </div>
+
+  <script>
+    x = 5;
+    x = 4;
+    let bill = 96;
+    let tipPercentage = 10;
+    let numPeople = 5;
+
+    let tipAmount = bill * tipPercentage / 100; 
+    let total = bill + tipAmount;
+    let perPerson = Math.round(total / numPeople);
+
+    let output = "";
+    output = output + "Bill: $" + bill + "\n";
+    output = output + "Tip (" + tipPercentage + "%): $" + tipAmount + "\n";
+    output = output + "Total: $" + total + "\n";
+    output = output + "Number of People: " + numPeople + "\n";
+    output = output + "Per Person: $" + perPerson + "\n";
+
+    document.getElementById("output").textContent = output;
+    console.log(output);
+  </script>
+  
+</body>
+</html>
