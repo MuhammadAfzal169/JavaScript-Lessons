@@ -10,6 +10,68 @@
       background-color: rgb(19, 26, 48);
       color: white;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgb(21, 31, 63);
+      border: 2px solid rgb(30, 36, 60);
+      border-radius: 16px;
+      padding: 24px;
+      width: 320px;
+    }
+
+    .result {
+      margin-top: 14px;
+      padding: 10px 16px;
+      background-color: rgb(19, 26, 48);
+      border-radius: 8px;
+      line-height: 30px;
+    }
+    
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Age Calculator</h1>
+    <div class="result">
+      <div id="output"></div>
+      <div id="status"></div>
+      <div id="types"></div>
+    </div>
+  </div>
+
+  <script>
+    let birthYear = 2010;
+    const currentYear = 2025;
+    let age = currentYear - birthYear;
+
+    let isAdult = age >= 18;
+
+    document.getElementById("output").textContent = "You are " + age + " years old.";
+    document.getElementById("status").textContent = "Is Adult: " + isAdult;
+
+    let ageType = typeof age;
+    let currentYearType = typeof currentYear;
+    let isAdultType = typeof isAdult;
+
+    document.getElementById("types").textContent =  
+      "Type of age: " + ageType + ", Type of currentYear: " + currentYearType + ", Type of isAdult: " + isAdultType;
+  </script>
+
+
+
+  <!-- 
+  body {
+      font-family: Arial;
+      background-color: rgb(19, 26, 48);
+      color: white;
+      margin: 0;
     }
 
     .container {
@@ -39,9 +101,7 @@
       line-height: 24px;
     }
 
-  </style>
-</head>
-<body>
+
   <div class="container">
     <h1>Restaurant Calculator</h1>
     <div class="card">
@@ -72,7 +132,7 @@
 
     document.getElementById("output").textContent = output;
     console.log(output);
-  </script>
+  </script> -->
   
 </body>
 </html>
