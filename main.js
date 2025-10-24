@@ -1,38 +1,94 @@
-let tempInput = prompt("Enter the current temperature in Celsius: ");
+// Lesson 5
 
-let temp = Number(tempInput);
 
-if (isNaN(temp)) {
-  console.log("Please enter a valid number for temperature.");
-} else {
-  if (temp <= 0) {
-    console.log("It's freezing cold! Wear a heavy coat, gloves, and a hat.");
-  } else if (temp > 0 && temp <= 15) {
-    console.log("It's quite chilly. Wear a warm jacket and maybe a scarf.");
-  } else if (temp > 15 && temp <= 25) {
-    console.log("The weather is mild. A light sweater or long-sleeve shirt should be fine.");
-  } else if (temp > 25 && temp <= 35) {
-    console.log("It's warm outside. A t-shirt and shorts are appropriate.");
-  } else {
-    console.log("It's very hot! Stay cool with light clothing and drink plenty of water.");
-  }
 
-  let isSunny = confirm("Is it sunny outside?");
 
-  if (isSunny && temp > 20) {
-    console.log("Great day for sunglasses and a walk")
-  } else if (!isSunny && temp < 15) {
-    console.log("Might rain, don't forget your umbrella and a warm coat.");
-  } else {
-    console.log("Have a great day whatever the weather is!")
-  }
+// num / 2 === 0
+// num % 2 === 0
+// num % 2 == 0
+// num / 2 = 0
 
-  console.log("Type before conversion: " + typeof tempInput);
-  console.log("Type after conversion: " + typeof temp);
 
-}
 
-// Not A Number
+
+
+
+
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// console.log(add(5, 2));
+// console.log(add(10, 3));
+// console.log(5+2);
+// console.log(10 + 3);
+
+
+// hello("Alessandra");
+// // hoisting
+
+// function hello(name) {
+//   console.log("Welcome to school " + name);
+// }
+
+// hello(prompt("Please enter your name:"));
+
+
+
+// const powerFour = function(num) {
+//   return num ** 4;
+// }
+
+const powerFour = num => {return num ** 4};
+
+console.log(powerFour(2));
+console.log(powerFour(5));
+
+// console.log(square(1));
+// console.log(square(2));
+// console.log(square(3));
+// console.log(square(4));
+
+
+
+
+// Lesson: 4;
+
+// let tempInput = prompt("Enter the current temperature in Celsius: ");
+
+// let temp = Number(tempInput);
+
+// if (isNaN(temp)) {
+//   console.log("Please enter a valid number for temperature.");
+// } else {
+//   if (temp <= 0) {
+//     console.log("It's freezing cold! Wear a heavy coat, gloves, and a hat.");
+//   } else if (temp > 0 && temp <= 15) {
+//     console.log("It's quite chilly. Wear a warm jacket and maybe a scarf.");
+//   } else if (temp > 15 && temp <= 25) {
+//     console.log("The weather is mild. A light sweater or long-sleeve shirt should be fine.");
+//   } else if (temp > 25 && temp <= 35) {
+//     console.log("It's warm outside. A t-shirt and shorts are appropriate.");
+//   } else {
+//     console.log("It's very hot! Stay cool with light clothing and drink plenty of water.");
+//   }
+
+//   let isSunny = confirm("Is it sunny outside?");
+
+//   if (isSunny && temp > 20) {
+//     console.log("Great day for sunglasses and a walk")
+//   } else if (!isSunny && temp < 15) {
+//     console.log("Might rain, don't forget your umbrella and a warm coat.");
+//   } else {
+//     console.log("Have a great day whatever the weather is!")
+//   }
+
+//   console.log("Type before conversion: " + typeof tempInput);
+//   console.log("Type after conversion: " + typeof temp);
+
+// }
+
 
 
 
