@@ -1,17 +1,164 @@
+// Lesson 6
+
+const grades = [85, 65, 72, 89, 100];
+
+function grader(array) {
+  let message = array.map(grade => "Your grade is " + grade);
+  console.log(message);
+}
+
+grader(grades);
+
+
+
+
+
+// const teachers = ["Smith", "Jacob", "Amelia", "Bob"];
+// let greetings = teachers.map(name => "Welcome to school " + name);
+// let greeting = teachers.map(function(name) {
+//  return "Welcome to school " + name;
+// }); 
+
+// // name => "Hello" + name;
+// console.log(greetings);
+
+// const grades = [78, 82, 95, 90];
+// console.log(grades)
+// let fixedGrades = grades.map(grade => grade + 5);
+// console.log(fixedGrades);
+
+// const students = ["Alex", "Bob", "Alice", "Alex", "Smith", "Alex"];
+// let alexPos = students.indexOf("Alex", 4);
+// console.log(students);
+// console.log(alexPos);
+
+// let check = students.includes("Luther");
+// console.log(check);
+
+// let classA = students.slice(3, 6);
+// console.log(classA);
+// console.log(students);
+
+// const subjects = ["Algebra", "Geometry", "Computer Science"];
+// console.log(subjects);
+// subjects.splice(2, 1, "English", "Spanish", "Astronomy", "Chemistry");
+// console.log(subjects);
+
+// subjects[0] = "Physics";
+// console.log(subjects);
+
+// let fruit1 = "apple";
+// let fruit2 = "banana";
+// let fruit3 = "orange";
+
+// const fruit = ["apple", "banana", "orange"];
+// // console.log(fruit);
+// fruit[0] = "watermelon";
+// console.log(fruit);
+// const vegetable = new Array("carrot", "tomato", "celery");
+// console.log(vegetable);
+// vegetable[0] = "potato";
+// console.log(vegetable);
+// vegetable.push("onion", "carrot", "cucumber");
+// console.log(vegetable);
+
+// const cars = ["toyota", "lexus", "mercedes"];
+// console.log(cars);
+// let removedCar = cars.pop();
+// console.log(cars);
+// console.log("This car was removed " + removedCar);
+// removedCar = cars.shift();
+// console.log(cars);
+// console.log(removedCar);
+
+// cars.unshift("bmw", "porsche", "dodge");
+// console.log(cars);
+
+// const grades = [95, 80, 82, 75];
+// console.log(grades);
+// grades[3] = 95;
+// console.log(grades);
+
+
+// const calculator =function(input1, input2) {
+//   return input1 + input2;
+// }
+
+// console.log(calculator(2, 3));
+
+
+
+
+
+
+
+
+
+
+
+
 // Lesson 5
-
-
-
 
 // num / 2 === 0
 // num % 2 === 0
 // num % 2 == 0
 // num / 2 = 0
 
+// function guessNumber() {
+//   let secret = 7;
+//   let guess = prompt("Guess the number!");
+//   if (guess === secret) {
+//     console.lgo("You guessed it right!");
+//   } else {
+//     console.log("Wrong guess try again");
+//   }
+// }
+// Guessnumber();
 
 
 
+// function calculator() {
+//   let num1 = prompt("Enter first number");
+//   let num2 = prompt("Enter second number");
+//   let operation = prompt("Enter +, -, *, or /");
+//   if (operation == "+") {
+//     console.log("Result:" num1 + num2);
+//   } else if (operation = "-") {
+//     console.log("Result:" + num1 - num2);
+//   } else if (operation == "*") {
+//     console.log("Result:" + num1 * num2);
+//   } else if (operation == "/") {
+//     console.log("Result:" + num1 / num2);
+//   } else {
+//     console.log("Wrong opertion");
+//   }
+// }
+// calculater();
 
+
+
+// function help() {
+//    let message = prompt("Please call for 911 if you need urgent help: (type 911)");
+//    console.log("Please call for 911 if you need urgent help: (type 911):\n>>> " + message);
+//    if (mesage === 911) {
+//     console.log("What is you emergency?");
+//     let department = prompt("What department do need? \nType: police, firefighters, medics");
+//     console.lod("What department do need? \nType: police, firefighters, medics " + department);
+//     if (department == "police") {
+//       console.log("Police is on the way");
+//     } else if (departmet == "firefighters") {
+//       console.log("Firefighters are on the way")
+//     } else if (department == "medics") {
+//       console.log("Medics are on the way");
+//     } else {
+//       consol.log("You entered the wrong department");
+//     }
+//    } else {
+//     console.log("You called a wrong number");
+//    }
+// }
+
+// help();
 
 
 
@@ -40,10 +187,11 @@
 //   return num ** 4;
 // }
 
-const powerFour = num => {return num ** 4};
 
-console.log(powerFour(2));
-console.log(powerFour(5));
+// const powerFour = num => {return num ** 4};
+
+// console.log(powerFour(2));
+// console.log(powerFour(5));
 
 // console.log(square(1));
 // console.log(square(2));
