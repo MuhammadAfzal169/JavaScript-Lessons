@@ -1,23 +1,199 @@
-// Lesson 6
+// Lesson 7
 
-const grades = [85, 65, 72, 89, 100];
 
-function grader(array) {
-  let message = array.map(grade => "Your grade is " + grade);
-  console.log(message);
+let playlist = ["Shape of you", "Turn TV off", "Let Down", "Everybody knows", "Now or Never", "Hello", "German", "Brule"];
+
+function addNewSongs(song) {
+  playlist.unshift(song);
+  console.log(`Added ${song} to the start`);
 }
 
-grader(grades);
+function addOldSongs(song) {
+  playlist.push(song);
+  console.log(`Added ${song} to the end`);
+}
+
+function removeFirstSong() {
+  let removed = playlist.shift();
+  console.log(`Removed first song: ${removed}`)
+}
+
+function removeLastSong() {
+  let removed = playlist.pop();
+  console.log(`Removed last song: ${removed}`)
+}
+
+function findSong(song) {
+  if (playlist.includes(song)) {
+    console.log(`${song} is in the playlist`);
+  } else {
+    console.log(`${song} is not in the playlist`)
+  }
+}
+
+function replaceSong(oldSong, newSong) {
+  let index = playlist.indexOf(oldSong);
+  if (index !== -1) {
+    playlist.splice(index, 1, newSong);
+    console.log(`Replaced ${oldSong} with ${newSong}`)
+  } else {
+    console.log(`Could not find ${oldSong} to replace`)
+  }
+} 
+
+function showShortSongs() {
+  let shortSongs = playlist.filter(function(song) {
+    return song.length <= 10;
+  });
+  console.log("Short Songs:");
+  console.log(shortSongs.join("\n"));
+}
+
+function sortSongs() {
+  playlist.sort();
+  console.log("Songs sort A - Z");
+  console.log(playlist.join("\n"));
+}
+
+// ----- Run ------
+
+console.log(playlist);
+removeFirstSong();
+removeLastSong();
+addNewSongs("Warriors");
+addOldSongs("Till I Collapse");
+findSong("Let Down");
+findSong("Enemies");
+replaceSong("Turn TV off", "Bad Day");
+showShortSongs();
+sortSongs();
+console.log(playlist);
 
 
 
 
+
+// let ages = [5, 23, 54, 17, 13, 18];
+
+// let adults = ages.filter((age) => age >= 18);
+// let children = ages.filter(function(age) {
+//   return age < 18;
+// });
+
+// let message = ages.map(function(age) {
+//   return "He is " + age;
+// })
+
+// console.log(adults);
+// console.log(children);
+// console.log(message);
+// console.log(ages);
+
+
+// let products = [2, 6, 1, 10, 5, 3, 25, 12, 23, 54];
+// let cheap_products = products.filter(function(product) {
+//   return product < 15;
+// });
+
+// console.log("These are the cheap items " + cheap_products)
+
+// let item_prices = [2, 23, 5, 12, 54, 67, 1, 6];
+// let item_expensive = item_prices.find(function(price) {
+//   return price > 54;
+// })
+
+// console.log(item_expensive);
+
+// let cities = ["New York", "London", "Paris"];
+// let dream = cities.forEach(function(city) {
+//   console.log("I want to go to " + city);
+// })
+
+// console.log(dream);
+// console.log(cities);
+
+// let prices = [10, 20, 30];
+// let total = 0;
+
+// prices.forEach(function(price) {
+//   total += price;
+// });
+
+// let new_prices = prices.map(function(price) {
+//   return 30 += 30; 
+// });
+
+
+// console.log(new_prices);
+
+// let inflation = prices.map(function(price) {
+//   return price * 1.25;
+// });
+
+// console.log(inflation);
+// console.log(prices);
+// console.log(total);
+
+
+// let first_grade = ["John", "Peter", "Sarah"];
+// let second_grade = ["Emma", "Potter", "James"];
+// let students = first_grade.concat(second_grade);
+// console.log(first_grade);
+// console.log(second_grade);
+// console.log(students);
+
+// let names = ["Bob", "Cristine", "Alex", "Hugo"];
+// console.log(names);
+// console.log(names.join(" & "));
+// console.log(names.sort());
+// let numbers = [10, 70, 20, 100, 3, 65, 5, 60];
+// numbers.sort((a, b) => a-b);
+// console.log(numbers);
+
+// names.reverse();
+
+// console.log(names);
+
+
+// let numbers = [5, 2, 6, 3, 2, 4];
+// let total = numbers.reduce(function(accumulator, current) {
+//   return accumulator + current;
+// }, 0);
+
+// Step 1: Acc = 0; Current = 5; total = 5;
+// Step 2: Acc = 5; Current = 2; total = 7;
+// Step 3: Acc = 7; Current = 6; total = 13;
+// Step 4: Acc = 13; Current = 3; total = 16;
+
+
+// console.log(numbers);
+// console.log(total); 
+
+
+
+
+
+
+
+
+
+
+// Lesson 6
+
+// const grades = [85, 65, 72, 89, 100];
+
+// function grader(array) {
+//   let message = array.map(grade => "Your grade is " + grade);
+//   console.log(message);
+// }
+
+// grader(grades);
 
 // const teachers = ["Smith", "Jacob", "Amelia", "Bob"];
 // let greetings = teachers.map(name => "Welcome to school " + name);
 // let greeting = teachers.map(function(name) {
 //  return "Welcome to school " + name;
-// }); 
+// });
 
 // // name => "Hello" + name;
 // console.log(greetings);
