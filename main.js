@@ -1,74 +1,288 @@
-// Lesson 7
+// Lesson 8: Objects
 
 
-let playlist = ["Shape of you", "Turn TV off", "Let Down", "Everybody knows", "Now or Never", "Hello", "German", "Brule"];
 
-function addNewSongs(song) {
-  playlist.unshift(song);
-  console.log(`Added ${song} to the start`);
-}
+// const student = {
+//   "student-name": "John",
+//   "student age": 20
+// }
 
-function addOldSongs(song) {
-  playlist.push(song);
-  console.log(`Added ${song} to the end`);
-}
+// console.log(student["student age"]);
 
-function removeFirstSong() {
-  let removed = playlist.shift();
-  console.log(`Removed first song: ${removed}`)
-}
+// console.log(student);
+// console.log(student.name);
+// console.log(student.age);
 
-function removeLastSong() {
-  let removed = playlist.pop();
-  console.log(`Removed last song: ${removed}`)
-}
+// const user = {
+//   userName: "Alex",
+//   password: 1234,
+//   dateBirth: 2005
+// }
 
-function findSong(song) {
-  if (playlist.includes(song)) {
-    console.log(`${song} is in the playlist`);
-  } else {
-    console.log(`${song} is not in the playlist`)
-  }
-}
+// const car = ["BMW"];
 
-function replaceSong(oldSong, newSong) {
-  let index = playlist.indexOf(oldSong);
-  if (index !== -1) {
-    playlist.splice(index, 1, newSong);
-    console.log(`Replaced ${oldSong} with ${newSong}`)
-  } else {
-    console.log(`Could not find ${oldSong} to replace`)
-  }
-} 
+// const car = {
+//   company: "BMW",
+//   model: "amg",
+//   year: 2025,
+//   color: "red",
+// }
 
-function showShortSongs() {
-  let shortSongs = playlist.filter(function(song) {
-    return song.length <= 10;
-  });
-  console.log("Short Songs:");
-  console.log(shortSongs.join("\n"));
-}
+// const hobby = ["Reading", "Dancing", "Singing"];
+// console.log(hobby);
+// hobby[1] = "Cooking";
+// console.log(hobby);
 
-function sortSongs() {
-  playlist.sort();
-  console.log("Songs sort A - Z");
-  console.log(playlist.join("\n"));
-}
+// const person = {
+//   name: "Jack", 
+//   hobby: "Singing"
+// }
 
-// ----- Run ------
+// console.log(person.hobby);
+// person.hobby = "Dancing";
+// console.log(person.hobby);
 
-console.log(playlist);
-removeFirstSong();
-removeLastSong();
-addNewSongs("Warriors");
-addOldSongs("Till I Collapse");
-findSong("Let Down");
-findSong("Enemies");
-replaceSong("Turn TV off", "Bad Day");
-showShortSongs();
-sortSongs();
-console.log(playlist);
+// console.log(person);
+// person.city = "New York";
+// person.age = 27;
+// person.id = 23415;
+// console.log(person);
 
+// const airplane = {
+//   name: "Uzbek Airlines",
+//   year: 2012,
+//   numSeats: 100,
+//   passengers: 73
+// }
+
+// airplane.passengers = 85;
+// console.log(airplane.passengers);
+
+// airplane.color = "white";
+// console.log(airplane);
+// delete airplane.color;
+// console.log(airplane);
+
+// const person = {
+//   name: "Peter",
+//   age: 20,
+//   bYear: 2007,
+//   cYear: 2025,
+//   calculate: function() {
+//     console.log(this.name + " is " + (this.cYear - this.bYear) + " old.");
+//   },
+//   greet: function() {
+//     console.log(`Hello my name is ${this.name} and I am ${this.age} old.`);
+//   }
+// }
+
+// person.calculate();
+// person.greet();
+
+// person.greet();
+// console.log(person);
+// person.application = function() {
+//   console.log("Peter has submitted his application");
+// }
+// console.log(person);
+// person.application();
+
+
+// ---------------- Practice -------------------
+
+
+// const player = {
+//   name: "Ali",
+//   score: 0,
+//   increase: function(points) {
+//     this.score += points;
+//   },
+//   showScore: function() {
+//     console.log(this.name + "'s score is " + this.score);
+//   }
+// };
+
+// player.showScore();
+// player.increase(10);
+// player.showScore();
+// player.increase(25);
+// player.showScore();
+
+
+// const calculator = {
+//   add: function(a, b) {
+//     return a + b;
+//   },
+//   subtract: function(a, b) {
+//     return a - b;
+//   },
+//   multiply: function(a, b) {
+//     return a * b;
+//   },
+//   divide: function(a, b) {
+//     return a / b;
+//   }
+// }
+
+// console.log(calculator.add(4, 3));
+// console.log(calculator.subtract(4, 3));
+// console.log(calculator.multiply(4, 3));
+// console.log(calculator.divide(4, 3));
+
+
+// const car = {
+//   brand: "Toyota",
+//   speed: 0,
+//   start: function() {
+//     console.log("Car started");
+//   },
+
+//   accelerate: function(amount) {
+//     this.speed += amount;
+//     console.log("Speed is now " + this.speed + " mil/hour");
+//   },
+
+//   stop: function() {
+//     this.speed = 0;
+//     console.log("Car stopped");
+//   }
+// };
+
+// car.start();
+// car.accelerate(50);
+// car.accelerate(24);
+// car.stop();
+
+
+// const bankAccount = {
+//   owner: "Jack", 
+//   balance: 5000,
+//   deposit: function(amount) {
+//     this.balance += amount;
+//     console.log("Deposited $" + amount + ". New balance is $" + this.balance);
+//   },
+
+//   withdraw: function(amount) {
+//     if (amount <= this.balance) {
+//       this.balance -= amount;
+//       console.log("Withdrew $" + amount + ". New balance $" + this.balance);
+//     } else {
+//       console.log("Insufficient amount of money!");
+//     }
+//   }
+// };
+
+// console.log("Balance: " + bankAccount.balance);
+// let money = Number(prompt("Please input amount of money: "));
+// bankAccount.deposit(Number(prompt("Please input amount of money: ")));
+// bankAccount.withdraw(Number(prompt("Please input amount of money: ")));
+// bankAccount.withdraw(Number(prompt("Please input amount of money: ")));
+// bankAccount.withdraw(Number(prompt("Please input amount of money: ")));
+
+// const car = [];
+// console.log(car);
+
+// car.unshift(prompt("Please enter your car: "));
+// car.unshift(prompt("Please enter your car: "));
+// car.unshift(prompt("Please enter your car: "));
+// car.push(prompt("Please enter your car: "));
+// console.log(car);
+
+
+// const user = {
+//   name: "Jack",
+//   email: "jack@gmail.com",
+//   loggedIn: false,
+//   login: function() {
+//     this.loggedIn = true;
+//     console.log(`${this.name} just logged in.`);
+//   },
+//   logout: function() {
+//     this.loggedIn = false;
+//     console.log(`${this.name} just logged out.`);
+//   }
+// };
+
+// user.login();
+// console.log(user.loggedIn);
+// user.logout();
+// console.log(user.loggedIn);
+// user.loggedIn;
+
+
+
+
+
+// Lesson 7: Array Methods
+
+
+// let playlist = ["Shape of you", "Turn TV off", "Let Down", "Everybody knows", "Now or Never", "Hello", "German", "Brule"];
+
+// function addNewSongs(song) {
+//   playlist.unshift(song);
+//   console.log(`Added ${song} to the start`);
+// }
+
+// function addOldSongs(song) {
+//   playlist.push(song);
+//   console.log(`Added ${song} to the end`);
+// }
+
+// function removeFirstSong() {
+//   let removed = playlist.shift();
+//   console.log(`Removed first song: ${removed}`)
+// }
+
+// function removeLastSong() {
+//   let removed = playlist.pop();
+//   console.log(`Removed last song: ${removed}`)
+// }
+
+// function findSong(song) {
+//   if (playlist.includes(song)) {
+//     console.log(`${song} is in the playlist`);
+//   } else {
+//     console.log(`${song} is not in the playlist`)
+//   }
+// }
+
+// function replaceSong(oldSong, newSong) {
+//   let index = playlist.indexOf(oldSong);
+//   if (index !== -1) {
+//     playlist.splice(index, 1, newSong);
+//     console.log(`Replaced ${oldSong} with ${newSong}`)
+//   } else {
+//     console.log(`Could not find ${oldSong} to replace`)
+//   }
+// } 
+
+// function showShortSongs() {
+//   let shortSongs = playlist.filter(function(song) {
+//     return song.length <= 10;
+//   });
+//   console.log("Short Songs:");
+//   console.log(shortSongs.join("\n"));
+// }
+
+// function sortSongs() {
+//   playlist.sort();
+//   console.log("Songs sort A - Z");
+//   console.log(playlist.join("\n"));
+// }
+
+// // ----- Run ------
+
+// console.log(playlist);
+// removeFirstSong();
+// removeLastSong();
+// addNewSongs("Warriors");
+// addOldSongs("Till I Collapse");
+// findSong("Let Down");
+// findSong("Enemies");
+// replaceSong("Turn TV off", "Bad Day");
+// showShortSongs();
+// sortSongs();
+// console.log(playlist);
 
 
 
@@ -178,7 +392,7 @@ console.log(playlist);
 
 
 
-// Lesson 6
+// Lesson 6: Array
 
 // const grades = [85, 65, 72, 89, 100];
 
