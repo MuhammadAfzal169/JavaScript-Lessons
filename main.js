@@ -1,3 +1,304 @@
+// Lesson 10
+
+
+let bossHP = 300;
+let playerHP = 150;
+let heals = 3;
+
+// Player Action Function
+
+function playerAction(action) {
+  switch (action) {
+    case "punch":
+      console.log("You punched! -15 HP to the Boss");
+      bossHP-=15;
+      break;
+
+    case "kick":
+      console.log("You kicked! -20 HP to the Boss");
+      bossHP-=20;
+      break;
+
+    case "fire":
+      console.log("FIRE BLAST! -35 HP to the Boss");
+      bossHP-=35;
+      break;
+
+    case "heal":
+      if (heals > 0) {
+        console.log("You healed +25 HP");
+        playerHP+=25;
+        heals--;
+      } else {
+        console.log("No heals left!");
+      }
+      break;
+
+    case "run":
+      console.log("You ran away... Game Over.");
+      break;
+    
+    default:
+      console.log("Invalid action.")
+  }
+}
+
+// Boss Attack Function
+function bossAttack() {
+
+  let damage = Math.floor(Math.random() * 26) + 15;
+
+  console.log(`Boss attacks you for ${damage} HP!`);
+  playerHP -= damage;
+}
+
+
+for (let round = 1; round <= 20; round++) {
+  console.log(`================== ROUND ${round} ================`);
+
+  let action = prompt("Choose your move (punch, kick, fire, heal, run): ");
+
+  console.log("You chose: " + action);
+  playerAction(action);
+
+  if (bossHP <= 0) {
+    console.log("You defeated THE BOSS");
+    break;
+  }
+  
+  if (action == "run") {
+    break;
+  }
+
+  if (playerHP > 0) {
+    bossAttack();
+  }
+
+
+  if (playerHP <= 0) {
+    console.log("You died! The BOSS wins...");
+    break;
+  }
+
+  // Show stats
+  console.log(`Your HP: ${playerHP}`);
+  console.log(`Boss HP: ${bossHP}`);
+  console.log(`Heals left: ${heals}`);
+  console.log(`--------------------------`);
+}
+
+// End Game Results
+if (playerHP > 0 && bossHP <= 0) {
+  console.log(`Final Result: You WIN!`);
+} else if (playerHP <= 0) {
+  console.log(`Final Result: You LOST.`);
+} else {
+  console.log(`You escaped.`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//              0         1.      2         3
+// const names = ["Jack", "Steve", "Thomas", "Elsa"];
+
+// for (let i = 0; i < names.length; i++) {
+//   console.log(`Hello my name is = ${names[i]}.`);
+// }
+
+// let sum = 0;
+// let n = 100;
+
+// for (let i = 6; i > 5; i++) {
+//   console.log(i);
+// }
+
+// console.log(`Sum: ${sum}`);
+
+// let i = 10;
+
+// for(let i = 0; i<5; i++) {
+//   console.log("Hello World");
+// }
+
+
+// let trafficLight = "black";
+// checkLight("yellow");
+// checkLight("yellow");
+
+// function checkLight(trafficLight) {
+//   switch (trafficLight) {
+//     case "red":
+//       console.log("Stop");
+//       break;
+//     case "yellow":
+//       console.log("Wait");
+//       break;
+//     case "green":
+//       console.log("Drive");
+//       break;
+//     default:
+//       console.log("Invalid traffic light!");
+//   }
+// }
+
+
+
+// let age = 18;
+
+// switch (age) {
+//   case (age >= 18):
+//     console.log("Number (number type)");
+//     break;
+// }
+
+// if (day === 1) {
+//   console.log("Number (number type)");
+// } else {
+//   console.log("Number (string type)");
+// }
+
+
+
+// if (trafficLight == "red") {
+//   console.log("Stop");
+// } else if (trafficLight == "yellow") {
+//   console.log("Wait");
+// } else if (trafficLight == "green") {
+//   console.log("Drive");
+// } else {
+//   console.log("Invalid");
+// }
+
+
+
+
+
+// Function Declaration:
+// function checkAge(age) {
+//   if (age < 14) {
+//     console.log("You are a kid");
+//   } else if (age < 21) {
+//     console.log("You are a teen")
+//   } else if (age < 65) {
+//     console.log("You are a middle age")
+//   } else {
+//     console.log("You are a grandpa")
+//   }
+// }
+
+// checkAge(13);
+// checkAge(20);
+// checkAge(21);
+// checkAge(65);
+// checkAge(105);
+
+
+// 0 - 13 kid, 13 - 20 teen, 21 adult, grandpa 65- 125
+
+
+
+
+
+
+
+
+
+
+
+// Lesson 9
+
+       
+
+
+// const person = {
+//   name: "Jack",
+//   age: 18,
+//   "b-year": 2007,
+//   greet: function() {
+//     console.log("Hello");
+//   }
+// }
+
+// console.log(person);
+
+// delete person.greet;
+// delete person.age;
+
+// console.log(person);
+
+// const library = {
+//   books: [
+//     {title: "Harry Potter", author: "Morrison"}, 
+//     {title: "Persy Jackson", author: "James"}
+//   ]
+// }
+// const users = [  
+//   { name: "Ali", age: 18 },  
+//   { name: "Sara", age: 22 },  
+//   { name: "John", age: 19 } 
+// ];
+
+// name, age, b-year = keys
+// "Jack", 18, 2007 = 
+
+
+
+
+// function Car(brand, type, model, year, color = "White") {
+//   this.brand = brand || "unknown";
+//   this.type = type || "suv";
+//   this.model = model || "x6";
+//   this.year = year || null;
+//   this.color = color;
+// }
+
+// const bmw = new Car();
+
+
+// console.log(Car());
+// console.log(bmw);
+
+// // ----
+
+// let sum = 50;
+
+// function greet() {
+//   let sum = 10;
+//   return console.log("Hello 1");
+// }
+
+// greet();
+
+// console.log(sum) // 
+
+
+
+
+// const wallet = ["library card", 'Id', 'School ID', "DMV card"]
+// console.log(wallet);
+// console.log(wallet[0]);
+// console.log(wallet[wallet.length - 1]);
+
+// arrayName[arrayName.length - 1]
+
+
+
+
+
+
+
+
+
+
 // Lesson 8: Objects
 
 
