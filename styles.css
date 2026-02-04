@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+}
+
+#myBox {
+  background-color: lightblue;
+  width: 200px;
+  height: 200px;
+  font-size: 7.5rem;
+  display: flex;
+  padding: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(255, 254, 240);
+}
+
+#calculator {
+  background-color: rgb(30, 30, 30);
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+#display {
+  font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   font-size: 5rem;
+   text-align: left;
+   padding: 20px;
+   border: none;
+   background-color: #1A1A1A;
+   color: white;
+}
+
+#keys {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* same as 1fr 1fr 1fr 1fr*/
+   /* gap: 10px;
+   padding: 25px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4D4D4D;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(107, 107, 107);
+}
+
+button:active {
+  background-color: grey;
+}
+
+.operator-btn {
+  background-color: rgb(255, 159, 10);
+}
+
+.operator-btn:hover {
+  background-color: rgb(255, 194, 77);
+}
+.operator-btn:active {
+  background-color: rgb(204, 122, 0);
+} */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+  background-image: url(images/new-york.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#clock {
+  color: white;
+  font-size: 6rem;
+  font-family: monospace;
+  backdrop-filter: blur(5px);
+  background-color: rgba(162, 162, 162, 0.1);
+} */
+
+
+
+/* * {
+  font-family: monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#countLabel {
+  font-size: 6rem;
+}
+
+#btnContainer {
+  margin-top: 50px;
+}
+
+.countBtn {
+  color: white;
+  background-color: rgb(106, 171, 255);
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 200px;
+  text-transform: uppercase; 
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Button Styles */
+
+/*#decreaseBtn {
+  background-color: red;
+}
+
+#decreaseBtn:active {
+  background-color: rgb(185, 0, 0);
+}
+
+#resetBtn {
+  background-color: rgb(106, 171, 255);
+}
+
+#resetBtn:active {
+  background-color: rgb(69, 111, 165);
+}
+
+#increaseBtn {
+  background-color: rgb(78, 199, 51);
+}
+
+#increaseBtn:active {
+  background-color: rgb(51, 130, 33);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+  background: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  background: rgb(1, 1, 36);
+  color: rgb(255, 196, 0);
+  margin: 0;
+  padding: 30px 20px;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  background: rgb(255, 196, 0);
+  color: rgb(1, 1, 36);
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+
+.section-info {
+  padding: 10px 20px;
+}
+
+.section-info div {
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+ */

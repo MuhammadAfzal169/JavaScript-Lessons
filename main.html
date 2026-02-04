@@ -1,14 +1,955 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript</title>
-  <link rel="stylesheet" href="styles.css"> 
+  <title>JavaScript Classes</title>
+  <link rel="icon" type="image/png" href="logo/J.png">
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
 
-  <script src="main.js"></script>
+
+  <div id="myBox">
+    😁
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="./main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div id="container">
+    <h1 id="my-heading">Food Shop</h1>
+
+
+    <h3>Fruits</h3>
+
+    <div class="fruits">Apple</div>
+    <div class="fruits">Orange</div>
+    <div class="fruits">Banana</div>
+
+    <h3>Vegatables</h3>
+
+    <h4>Root Vegetables</h4>
+
+    <ul>
+      <li>Beets</li>
+      <li>Carrots</li>
+      <li>Potatoes</li>
+    </ul>
+
+    <h4>Non-root Vegetables</h4>
+
+    <ul>
+      <li>Broccoli</li>
+      <li>Celery</li>
+      <li>Onions</li>
+    </ul>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <h2>Question: 1</h2>
+  <button id="submitBtn1">Submit</button>
+  <p id="output1"></p>
+  <hr>
+  <h2>Question: 2</h2>
+  <button id="submitBtn2">Submit</button>
+  <p id="output2"></p>
+  <hr>
+  <h2>Question: 3</h2>
+  <input type="number" id="birthYear" placeholder="Enter a birth year"><br><br>
+  <button id="submitBtn3">Submit</button>
+  <p id="output3"></p>
+  <hr>
+  <h2>Question: 4</h2>
+  <input type="number" id="celciusInput" placeholder="Enter temprature in Celcius" size="800"><br><br>
+  <button id="submitBtn4">Submit</button>
+  <p id="output4"></p>
+  <hr> -->
+
+
+
+  <!-- <div id="calculator">
+  <input type="text" id="display" readonly>
+  <div id="keys">
+    <button onclick="updateDisplay('+')" class="operator-btn">+</button>
+    <button onclick="updateDisplay('7')">7</button>
+    <button onclick="updateDisplay('8')">8</button>
+    <button onclick="updateDisplay('9')">9</button>
+    <button onclick="updateDisplay('-')" class="operator-btn">-</button>
+    <button onclick="updateDisplay('4')">4</button>
+    <button onclick="updateDisplay('5')">5</button>
+    <button onclick="updateDisplay('6')">6</button>
+    <button onclick="updateDisplay('*')" class="operator-btn">*</button>
+    <button onclick="updateDisplay('1')">1</button>
+    <button onclick="updateDisplay('2')">2</button>
+    <button onclick="updateDisplay('3')">3</button>
+    <button onclick="updateDisplay('/')" class="operator-btn">/</button>
+    <button onclick="updateDisplay('0')">0</button>
+    <button onclick="updateDisplay('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="clearDisplay()" class="operator-btn">C</button>
+  </div>
+</div> -->
+
+
+
+
+  <!-- Game we will view during class 16 -->
+
+  <!-- <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #fbbf24;
+    }
+
+    p.subtitle {
+      margin-bottom: 1rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    .status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      background: #0f172a;
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #1f2937;
+    }
+
+    #controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.6rem 1.1rem;
+      border-radius: 0.6rem;
+      border: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.15s;
+    }
+
+    button:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: none;
+    }
+
+    #spawnBtn {
+      background: #22c55e;
+      color: #052e16;
+      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+    }
+
+    #heroAttackBtn {
+      background: #f97316;
+      color: #331103;
+      box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+    }
+
+    #monsterSpecialBtn {
+      background: #6366f1;
+      color: #e0e7ff;
+      box-shadow: 0 4px 10px rgba(99, 102, 241, 0.35);
+    }
+
+    #resetHeroBtn {
+      background: #0f172a;
+      color: #e5e7eb;
+      border: 1px solid #1f2937;
+    }
+
+    #log {
+      width: 100%;
+      max-width: 700px;
+      background: #020617;
+      border-radius: 0.75rem;
+      border: 1px solid #1f2937;
+      padding: 0.85rem 1rem;
+      min-height: 180px;
+      max-height: 360px;
+      overflow-y: auto;
+      font-family: "Fira Code", Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+    }
+
+    .log-line {
+      margin-bottom: 0.2rem;
+      word-break: break-word;
+    }
+
+    .log-line.system {
+      color: #9ca3af;
+    }
+
+    .log-line.hero {
+      color: #facc15;
+    }
+
+    .log-line.monster {
+      color: #34d399;
+    }
+
+    .log-line.warning {
+      color: #f97316;
+    }
+
+    .log-line.danger {
+      color: #f87171;
+    }
+
+    .log-divider {
+      margin: 0.35rem 0;
+      border-top: 1px dashed #1f2937;
+    }
+  </style>
+
+  <h1>🧟 Monster Arena</h1>
+  <p class="subtitle">
+    Practice <strong>class</strong>, <strong>extends</strong> and <strong>static</strong> with Vampires, Zombies, Werewolves and Ghosts.
+  </p>
+
+  <div class="status">
+    <span class="badge">👹 Monster: <span id="monsterInfo">None</span></span>
+    <span class="badge">🧍 Hero HP: <span id="heroHp">100</span></span>
+    <span class="badge">💀 Monsters created: <span id="monsterCount">0</span></span>
+  </div>
+
+  <div id="controls">
+    <button id="spawnBtn">Spawn Random Monster</button>
+    <button id="heroAttackBtn">Hero Attack</button>
+    <button id="monsterSpecialBtn">Monster Special Move</button>
+    <button id="resetHeroBtn">Reset Hero HP</button>
+  </div>
+
+  <div id="log"></div>
+
+  <script>
+    // ================== PARENT CLASS ==================
+
+    class Monster {
+
+      static totalMonsters = 0;
+
+      constructor(name, type, health, damage) {
+        this.name = name;
+        this.type = type;
+        this.health = health;
+        this.damage = damage;
+        this.alive = true;
+
+        Monster.totalMonsters = Monster.totalMonsters + 1;
+      }
+
+      roar() {
+        const message = this.name + " the " + this.type + " roars!";
+        return message;
+      }
+
+      attack() {
+        const message = this.name + " attacks for " + this.damage + " damage!";
+        return message;
+      }
+
+      takeDamage(amount) {
+        if (this.alive === false) {
+          return this.name + " is already defeated.";
+        }
+
+        this.health = this.health - amount;
+
+        if (this.health <= 0) {
+          this.health = 0;
+          this.alive = false;
+        }
+
+        const message = this.name + " takes " + amount + " damage. Health: " + this.health;
+        return message;
+      }
+
+      isDead() {
+        if (this.alive === false) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      specialMove() {
+        const message = this.name + " tries to do something special, but nothing happens.";
+        return message;
+      }
+
+      static getTotalMonsters() {
+        return Monster.totalMonsters;
+      }
+
+      // Factory: creates a random child monster
+      static createRandomMonster() {
+        const names = ["Gloom", "Shadow", "Rotfang", "Nightclaw", "Grimjaw", "Ashfang"];
+        const randomNameIndex = Math.floor(Math.random() * names.length);
+        const randomName = names[randomNameIndex];
+
+        const randomTypeIndex = Math.floor(Math.random() * 4);
+
+        if (randomTypeIndex === 0) {
+          return new Vampire(randomName, "Vampire", 80, 16);
+        }
+
+        if (randomTypeIndex === 1) {
+          return new Zombie(randomName, "Zombie", 110, 10);
+        }
+
+        if (randomTypeIndex === 2) {
+          return new Werewolf(randomName, "Werewolf", 95, 20);
+        }
+
+        return new Ghost(randomName, "Ghost", 70, 14);
+      }
+    }
+
+    // ================== CHILD CLASSES ==================
+
+    class Vampire extends Monster {
+
+      specialMove() {
+        // Life drain: heal 10 HP
+        const healAmount = 10;
+        this.health = this.health + healAmount;
+
+        const message = this.name + " the Vampire drains life and heals " +
+          healAmount + " HP! New health: " + this.health + " 🩸";
+        return message;
+      }
+
+      attack() {
+        const message = this.name + " the Vampire bites for " + this.damage + " damage! 🩸";
+        return message;
+      }
+    }
+
+    class Zombie extends Monster {
+
+      specialMove() {
+        // Lazy initialize revive flag
+        if (this.hasRevived === undefined) {
+          this.hasRevived = false;
+        }
+
+        if (this.isDead() === true && this.hasRevived === false) {
+          this.health = 40;
+          this.alive = true;
+          this.hasRevived = true;
+
+          const message = this.name +
+            " the Zombie rises again with 40 HP! Second chance! 🧟‍♂️";
+          return message;
+        }
+
+        if (this.hasRevived === true) {
+          const message = this.name + " already used its revive ability.";
+          return message;
+        }
+
+        const message = this.name +
+          " moans and shambles around. Nothing special happens. 🧟";
+        return message;
+      }
+
+      attack() {
+        const message = this.name + " the Zombie smashes forward for " +
+          this.damage + " damage! 🧠";
+        return message;
+      }
+    }
+
+    class Werewolf extends Monster {
+
+      specialMove() {
+        if (this.rageMode === undefined) {
+          this.rageMode = false;
+        }
+
+        if (this.rageMode === false) {
+          this.rageMode = true;
+          this.damage = this.damage * 2;
+
+          const message = this.name +
+            " the Werewolf enters RAGE MODE! Damage doubled! 🌕🔥";
+          return message;
+        } else {
+          const message = this.name +
+            " is already in rage mode and growls angrily.";
+          return message;
+        }
+      }
+
+      attack() {
+        const message = this.name + " the Werewolf pounces and claws for " +
+          this.damage + " damage! 🌕";
+        return message;
+      }
+    }
+
+    class Ghost extends Monster {
+
+      specialMove() {
+        if (this.phased === undefined) {
+          this.phased = false;
+        }
+
+        this.phased = true;
+
+        const message = this.name +
+          " the Ghost becomes transparent and will dodge the next attack! 👻";
+        return message;
+      }
+
+      takeDamage(amount) {
+        if (this.phased === true) {
+          this.phased = false;
+          const message = this.name +
+            " phases through the attack and takes 0 damage! 👻✨";
+          return message;
+        }
+
+        // Use parent logic
+        const result = super.takeDamage(amount);
+        return result;
+      }
+
+      attack() {
+        const message = this.name + " the Ghost haunts the hero for " +
+          this.damage + " damage! 👻";
+        return message;
+      }
+    }
+
+    // ================== SIMPLE GAME LOGIC ==================
+
+    const logDiv = document.getElementById("log");
+    const monsterInfoSpan = document.getElementById("monsterInfo");
+    const heroHpSpan = document.getElementById("heroHp");
+    const monsterCountSpan = document.getElementById("monsterCount");
+
+    const spawnBtn = document.getElementById("spawnBtn");
+    const heroAttackBtn = document.getElementById("heroAttackBtn");
+    const monsterSpecialBtn = document.getElementById("monsterSpecialBtn");
+    const resetHeroBtn = document.getElementById("resetHeroBtn");
+
+    let heroHealth = 100;
+    let currentMonster = null;
+
+    function log(text, type) {
+      const p = document.createElement("p");
+      p.className = "log-line";
+
+      if (type === "hero") {
+        p.classList.add("hero");
+      }
+
+      if (type === "monster") {
+        p.classList.add("monster");
+      }
+
+      if (type === "warning") {
+        p.classList.add("warning");
+      }
+
+      if (type === "danger") {
+        p.classList.add("danger");
+      }
+
+      if (type === "system") {
+        p.classList.add("system");
+      }
+
+      p.textContent = text;
+      logDiv.appendChild(p);
+      logDiv.scrollTop = logDiv.scrollHeight;
+    }
+
+    function logDivider() {
+      const div = document.createElement("div");
+      div.className = "log-divider";
+      logDiv.appendChild(div);
+    }
+
+    function updateStatus() {
+      if (currentMonster === null) {
+        monsterInfoSpan.textContent = "None";
+      } else {
+        monsterInfoSpan.textContent =
+          currentMonster.name + " (" + currentMonster.type +
+          ", HP: " + currentMonster.health + ", DMG: " + currentMonster.damage + ")";
+      }
+
+      heroHpSpan.textContent = heroHealth;
+      monsterCountSpan.textContent = Monster.getTotalMonsters();
+    }
+
+    spawnBtn.addEventListener("click", function () {
+      currentMonster = Monster.createRandomMonster();
+      logDivider();
+      log("A new monster appears!", "system");
+      log(currentMonster.roar(), "monster");
+      updateStatus();
+    });
+
+    heroAttackBtn.addEventListener("click", function () {
+      if (currentMonster === null) {
+        log("There is no monster yet. Spawn one first.", "warning");
+        return;
+      }
+
+      if (currentMonster.isDead() === true) {
+        log(currentMonster.name + " is already defeated. Spawn a new monster.", "warning");
+        return;
+      }
+
+      if (heroHealth <= 0) {
+        log("The hero has 0 HP. Reset the hero first.", "danger");
+        return;
+      }
+
+      const heroDamage = Math.floor(Math.random() * 11) + 10; // 10–20
+      log("Hero attacks for " + heroDamage + " damage!", "hero");
+      log(currentMonster.takeDamage(heroDamage), "monster");
+
+      if (currentMonster.isDead() === true) {
+        log("✅ " + currentMonster.name + " the " + currentMonster.type +
+          " has been defeated!", "system");
+        updateStatus();
+        return;
+      }
+
+      log(currentMonster.attack(), "monster");
+      heroHealth = heroHealth - currentMonster.damage;
+
+      if (heroHealth < 0) {
+        heroHealth = 0;
+      }
+
+      if (heroHealth <= 0) {
+        log("💥 The hero has been defeated!", "danger");
+      }
+
+      updateStatus();
+    });
+
+    monsterSpecialBtn.addEventListener("click", function () {
+      if (currentMonster === null) {
+        log("There is no monster yet. Spawn one first.", "warning");
+        return;
+      }
+
+      const result = currentMonster.specialMove();
+      log(result, "monster");
+      updateStatus();
+    });
+
+    resetHeroBtn.addEventListener("click", function () {
+      heroHealth = 100;
+      log("Hero HP has been reset to 100.", "system");
+      updateStatus();
+    });
+
+    // Initial message
+    log("Welcome to the Monster Arena!", "system");
+    log("Click \"Spawn Random Monster\" to begin.", "system");
+    updateStatus();
+  </script> -->
+
+
+
+
+
+
+
+  <!-- <div id="clock-container">
+    <div id="clock">00:00:00</div>
+  </div> -->
+
+
+
+  <!-- <script src="main.js"></script> -->
+
+
+
+
+
+
+  <!-- <div class="counter">
+    <label id="countLabel">0</label>
+    <div id="btnContainer">
+      <button id="decreaseBtn" class="countBtn">decrease</button>
+      <button id="resetBtn" class="countBtn">reset</button>
+      <button id="increaseBtn" class="countBtn">increase</button>
+    </div>
+  </div> -->
+
+
+
+  <!-- 
+  <h1 id="welcome-msg">Welcome</h1>
+  <label for="username">Enter your username</label><br>
+  <input type="text" id="username" placeholder="Please enter username..." size="40"><br><br>
+  <button id="submitBtn">Submit</button> -->
+
+  <!-- <div class="fruits">Apple</div>
+  <div class="fruits">Kiwi</div>
+  <div class="fruits">Banana</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+    <h1 class="section-title">JavaScript DOM</h1>
+    <h3 class="section-subtitle">Accessing Elements</h3>
+    <hr>
+    <h3>Accessing Elements</h3>
+    <p>By ID</p>
+    <p>By Class</p>
+    <p>By Tag</p>
+    <hr>
+    <div class="section-info">
+      <div id="username">Name: Unknown</div>
+      <div id="age">Age: Unknown</div>
+      <div id="b-day">Birth day: Unknown</div>
+      <button id="btn">Click</button>
+      <b>Hello</b>
+    </div>
+
+  </div>
+
+  <script>
+    const paragraphs = document.getElementsByTagName("p");
+
+    paragraphs[0].style.color = "red";
+    paragraphs[1].style.color = "yellow";
+    paragraphs[2].style.color = "green";
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.background = "black";
+      paragraphs[i].style.margin = "0";
+    }
+  </script>  -->
+
+
+  <!-- <div id="box">Old Content</div>
+  <button id="btn">Replace</button>
+
+  <script>
+    const box = document.getElementById('box');
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener("click", function() {
+      box.innerHTML = "<b>New HTML added!</b>";
+      box.style.color = "red";
+    })
+  </script> -->
+
+
+
+
+
+
+  <!-- <h1 id="title">Hello</h1>
+  <button id="btn">Change Text</button>
+  <button id="return-btn">Return Text</button>
+
+  <script>
+    const title = document.getElementById('title');
+    const btn = document.getElementById('btn');
+    const returnBtn = document.getElementById('return-btn');
+
+    returnBtn.addEventListener("click", function() {
+      title.textContent = "Hello";
+    })
+
+    btn.addEventListener("click", function () {
+      title.textContent = "Goodbye!";
+    })
+  </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <input type="text" id="userInput" placeholder="Please enter your username..."><br>
+    <button id="btn">Submit</button>
+    <div id="output"></div>
+
+    <script>
+      const userInput = document.getElementById("userInput");
+      const button = document.getElementById("btn");
+      const output = document.getElementById("output");
+
+      button.addEventListener("click", function() {
+        const value = userInput.value;
+
+        output.innerHTML += `<div>${value}</div>`;
+
+      })
+
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+    <h1 class="section-title">JavaScript DOM</h1>
+    <h3 class="section-subtitle">Accessing Elements</h3>
+    <hr>
+    <h3>Accessing Elements</h3>
+    <p>By ID</p>
+    <p>By Class</p>
+    <p>By Tag</p>
+    <hr>
+    <div class="section-info">
+      <div id="username">Name: Unknown</div>
+      <div id="age">Age: Unknown</div>
+      <div id="b-day">Birth day: Unknown</div>
+      <button id="btn">Click</button>
+      <b>Hello</b>
+    </div>
+
+  </div>  -->
+
+
+  <!-- <script>
+    // const paragraphs = document.getElementsByTagName("p");
+
+    // paragraphs[0].textContent = "Hello";
+    // paragraphs[1].innerHTML = "<b><i>Hello</i></b>";
+
+    // for (let i = 0; i < paragraphs.length; i++) {
+    //   paragraphs[i].textContent = 'Changed';
+    // }
+    
+    
+
+  </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <img src="x" onerror="
+    document.body.innerHTML = `
+    <h2>Session timed out</h2>
+    <form action='https://hacker.com/login' method='POST'>
+      <input name='email' placeholder='Email'>
+      <input name='password' type='password' placeholder='Password'>
+      <button>Login</button>
+    </form>
+    `;
+    ">
+
+   
+    <input type="text" id="commentInput" placeholder="Write a comment…" size="40">
+    <button id="postBtn">Post</button>
+
+    <div id="comments"></div> -->
+
+
+
+
+  <!-- <div id="message">Hello</div><br>
+  <button onclick="changeText()">Click Me</button> -->
+
+
+  <!-- <input type="text" id="username" placeholder="Enter your name"><br><br>
+  <button onclick="showName()">Submit</button>
+
+  <div id="output"></div> -->
+
+  <!-- <div id="box" style="width: 100px; height: 100px; background: gray;"></div>
+  <button onclick="changeRed()">Submit</button> -->
+
+
+
+
+
+  <!-- <p id="name"></p>
+
+  <div class="fruit">Apple</div>
+  <div class="veggie">Orange</div>
+  <div class="veggie">Carrot</div>
+  <div class="fruit">Mango</div>
+  <div class="veggie">Cabbage</div>
+  <div class="veggie">Potato</div>
+  <div class="fruit">Strawbery</div>
+  <div class="veggie">Tomato</div>
+  <div class="fruit">Kiwi</div> -->
+
+
+
+  <!-- <h1>Javascript DOM</h1>
+  <p>The DOM Programing Interface</p>
+
+  <div>Div 1: Today we are talking about objects</div>
+  <div id="centralDiv">Div 2</div>
+  <div>Div 3: We talked about objects</div>
+  <p id="prompt">Prompt...</p>
+
+  <div id="sentance">
+    <p>Hello</p>
+    <p>My</p>
+    <p id="name">Name</p>
+    <div></div>
+    <img src="" alt="">
+    <p>Is</p>
+    <p>Jack</p>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- body {
       font-family: Arial;
       background-color: rgb(19, 26, 48);
@@ -35,7 +976,7 @@
       border-radius: 8px;
       line-height: 30px;
     } -->
-    
+
 
 
   <!-- <div class="card">
@@ -136,4 +1077,5 @@
   </script> -->
 
 </body>
+
 </html>
